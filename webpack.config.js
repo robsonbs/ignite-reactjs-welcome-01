@@ -11,9 +11,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
+  devServer: {
+    contentBase: resolve(__dirname, 'public '),
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: resolve(__dirname,'public', 'index.html')
+      template: resolve(__dirname, 'public', 'index.html')
     })
   ],
   module: {
