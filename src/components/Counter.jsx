@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 export function Counter() {
-  const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   function increment() {
-    setCount(state => state + 1);
+    setCounter(state => state + 1);
   }
 
   return (
     <div>
-      <h2>{count}</h2>
+      <h2>{counter}</h2>
       <button type='button' onClick={increment}>
         Increment
       </button>
