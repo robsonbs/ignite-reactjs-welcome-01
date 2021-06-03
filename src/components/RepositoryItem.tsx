@@ -1,11 +1,13 @@
-type Repository = {
-  name: string;
-  id: number;
-  url: string;
-  description: string
+export type RepositoryItemProps = {
+  repository: {
+    name: string;
+    id: number;
+    url: string;
+    description: string
+  }
 }
 
-export function RepositoryItem({ id, name, description, url }: Repository) {
+export function RepositoryItem({ repository: { id, name, description, url } }: RepositoryItemProps) {
   return (
     <li>
       <strong>{name} {id}</strong>
